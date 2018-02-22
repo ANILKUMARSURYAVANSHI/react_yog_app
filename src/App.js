@@ -9,6 +9,7 @@ class App extends Component {
 
     <div>
       <Yog name="Bhashtrika" />
+      <Yog name="Anulom Vilom" >  New Yog</Yog>
       </div>
 
       //React.createElement('div',null,React.createElement('h1',{className:'App'},'anil'))
