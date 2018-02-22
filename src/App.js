@@ -4,12 +4,20 @@ import './App.css';
 import Yog from './Yog/yog';
 
 class App extends Component {
+  states = {
+    yogs :[{
+      name:'Asan'
+    },
+      {
+        name: 'Pranayam'
+      }]
+  }
   render() {
     return (
 
     <div>
-      <Yog name="Bhashtrika" />
-      <Yog name="Anulom Vilom" >  New Yog</Yog>
+      <Yog name={this.states.yogs[0].name} />
+        <Yog name={this.states.yogs[1].name} >  New Yog</Yog>
       </div>
 
       //React.createElement('div',null,React.createElement('h1',{className:'App'},'anil'))
