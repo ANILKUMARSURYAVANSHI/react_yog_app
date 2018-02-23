@@ -1,11 +1,13 @@
 import React from 'react';
+import './Yog.css';
 
 const yog = (props) => {
     return (
-        <div>
-    <p>Daily do yoga {props.name} for atleast {Math.floor(Math.random() * 100)} Minutes</p>
-    <p>{props.children}</p>
-    </div>);
+        <div className="Yog">
+            <p onClick={props.click} >Daily do yoga {props.name} </p>
+            <p>{props.children}</p>
+            <input type="text" onChange={props.changed} />
+        </div>);
 }
 
 export default yog;
