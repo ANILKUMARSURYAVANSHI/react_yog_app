@@ -6,10 +6,10 @@ import Yog from './Yog/yog';
 class App extends Component {
   state = {
     yogs: [{
-      name: 'Asan'
+      name: 'Asan', id: 'tt' 
     },
     {
-      name: 'Pranayam'
+      name: 'Pranayam', id: 'jy'
     }],
     showYog:false
   }
@@ -20,21 +20,26 @@ class App extends Component {
     this.setState({
       yogs: [
         { name: newval,id:'tt' },
-        { name: 'Niyam' ,id:'ty'}
+        { name: 'Niyam',id:'jy'}
       ]
     })
 
  
   }
 
-  someNameHandler = (event) => {
+  someNameHandler = (event,yogId) => {
 
-    console.log('event')
+    console.log('event');
+    const yogIndex = this.state.yogs.findIndex(y=> { return y.id === yogId});
+
+    let  yog = {...this.state.yogs[yogIndex]};
+    yog.name = event.target.value;
+
+    let yogs = [ ...this.state.yogs];
+    yogs[yogIndex] = yog; 
+
     this.setState({
-      yogs: [
-        { name: 'Ya,' },
-        { name: event.target.value }
-      ]
+      yogs: yogs
     })
 
  
@@ -64,7 +69,7 @@ class App extends Component {
       yogs = (
         <div>
           {this.state.yogs.map((yog,index)=>{
-            return <Yog  click={() => this.deleteYog(index)} name={yog.name} key={yog.id} />
+            return <Yog  click={() => this.deleteYog(index)} name={yog.name} key={yog.id} changed={(event)=>this.someNameHandler(event,yog.id)} />
           })}
          
         </div> 
