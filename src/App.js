@@ -46,7 +46,8 @@ class App extends Component {
   }
 
   deleteYog=(yogIndex)=>{
-   let  yogs =  this.state.yogs;
+   //let  yogs =  this.state.yogs;
+   let  yogs =  [...this.state.yogs];  //immutable method
    yogs.splice(yogIndex,1);
    this.setState({yogs:yogs});
   }
