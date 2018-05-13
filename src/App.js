@@ -10,7 +10,8 @@ class App extends Component {
     },
     {
       name: 'Pranayam'
-    }]
+    }],
+    showYog:false
   }
 
   someHandler = (newval) => {
@@ -39,19 +40,41 @@ class App extends Component {
  
   }
 
+  toggleYog =()=>{
+    const showStatus = this.state.showYog;
+    this.setState({showYog: !showStatus})
+  }
+
 
   render() {
     const style = {
       backgroundColor: 'red',
       border: '1px solid blue'
     }
+     
+    let yogs = null;
+    if(this.state.showYog){
+      yogs =(
+        <div>
+          <Yog click={this.someHandler.bind(this, 'Dhyan')} name={this.state.yogs[0].name} />
+          <Yog changed={this.someNameHandler} name={this.state.yogs[1].name} >  New Yog</Yog>
+        </div> 
+      )
+    }
+
     return (
        
       <div>
-        <button style={style} onClick={this.someHandler.bind(this, 'Samathi')} >Switch Yog</button>
+        {/* <button style={style} onClick={this.someHandler.bind(this, 'Samathi')} >Switch Yog</button> */}
+        <button style={style} onClick={this.toggleYog} >Switch Yog</button>
         <p >{this.state.yogs[0].name}</p>
+        {/* { this.state.showYog == true ?
+        <div>
         <Yog click={this.someHandler.bind(this,'Dhyan')} name={this.state.yogs[0].name} />
         <Yog changed={this.someNameHandler} name={this.state.yogs[1].name} >  New Yog</Yog>
+        </div>  : null
+        } */}
+        {yogs}
       </div>
 
       //React.createElement('div',null,React.createElement('h1',{className:'App'},'anil'))
