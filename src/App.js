@@ -19,8 +19,8 @@ class App extends Component {
     console.log('11');
     this.setState({
       yogs: [
-        { name: newval },
-        { name: 'Niyam' }
+        { name: newval,id:'tt' },
+        { name: 'Niyam' ,id:'ty'}
       ]
     })
 
@@ -64,7 +64,7 @@ class App extends Component {
       yogs = (
         <div>
           {this.state.yogs.map((yog,index)=>{
-            return <Yog  click={() => this.deleteYog(index)} name={yog.name} />
+            return <Yog  click={() => this.deleteYog(index)} name={yog.name} key={yog.id} />
           })}
          
         </div> 
