@@ -60,12 +60,25 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: 'red',
-      border: '1px solid blue'
+      backgroundColor: 'green',
+      border: '1px solid blue',
+        color:'white'
     }
+
+    //Adding dynamic classes
+      const classes = [];
+
+    if(this.state.yogs.length >= 2){
+      classes.push('red');
+    }
+    if(this.state.yogs.length <= 1){
+      classes.push('bold');
+    }
+
      
     let yogs = null;
     if(this.state.showYog){
+      style.backgroundColor = 'red';
       yogs = (
         <div>
           {this.state.yogs.map((yog,index)=>{
@@ -79,6 +92,7 @@ class App extends Component {
     return (
        
       <div>
+          <p className={classes}> This is working Example</p>
         <button style={style} onClick={this.toggleYog} >Switch Yog</button>
        
        
