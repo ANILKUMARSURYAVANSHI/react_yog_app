@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Radium from 'radium';
 import './App.css';
 import Yog from './Yog/yog';
 
@@ -62,7 +62,11 @@ class App extends Component {
     const style = {
       backgroundColor: 'green',
       border: '1px solid blue',
-        color:'white'
+        color:'white',
+        ':hover':{
+          backgroundColor:'lightGreen',
+            color:'black'
+        }
     }
 
     //Adding dynamic classes
@@ -79,6 +83,10 @@ class App extends Component {
     let yogs = null;
     if(this.state.showYog){
       style.backgroundColor = 'red';
+      style[':hover'] = {
+        backgroundColor:'salmon',
+          color:'black'
+      }
       yogs = (
         <div>
           {this.state.yogs.map((yog,index)=>{
@@ -113,4 +121,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Radium(App);
