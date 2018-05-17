@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Radium from 'radium';
+import Radium, { StyleRoot } from 'radium';
 import './App.css';
 import Yog from './Yog/yog';
 
@@ -98,7 +98,7 @@ class App extends Component {
     }
 
     return (
-       
+       <StyleRoot>
       <div>
           <p className={classes}> This is working Example</p>
         <button style={style} onClick={this.toggleYog} >Switch Yog</button>
@@ -106,6 +106,7 @@ class App extends Component {
        
         {yogs}
       </div>
+       </StyleRoot>
 
       //React.createElement('div',null,React.createElement('h1',{className:'App'},'anil'))
       // <div className="App">
