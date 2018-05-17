@@ -1,6 +1,6 @@
 import React from 'react';
 import './Yog.css';
-import Radium from 'radium';
+
 
 
 const yog = (props) => {
@@ -17,4 +17,4 @@ const yog = (props) => {
         </div>);
 }
 
-export default Radium(yog);
+export default yog;

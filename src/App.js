@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Radium, { StyleRoot } from 'radium';
 import './App.css';
 import Yog from './Yog/yog';
 
@@ -62,11 +61,7 @@ class App extends Component {
     const style = {
       backgroundColor: 'green',
       border: '1px solid blue',
-        color:'white',
-        ':hover':{
-          backgroundColor:'lightGreen',
-            color:'black'
-        }
+        color:'white'
     }
 
     //Adding dynamic classes
@@ -83,10 +78,7 @@ class App extends Component {
     let yogs = null;
     if(this.state.showYog){
       style.backgroundColor = 'red';
-      style[':hover'] = {
-        backgroundColor:'salmon',
-          color:'black'
-      }
+
       yogs = (
         <div>
           {this.state.yogs.map((yog,index)=>{
@@ -98,7 +90,7 @@ class App extends Component {
     }
 
     return (
-       <StyleRoot>
+
       <div>
           <p className={classes}> This is working Example</p>
         <button style={style} onClick={this.toggleYog} >Switch Yog</button>
@@ -106,20 +98,11 @@ class App extends Component {
        
         {yogs}
       </div>
-       </StyleRoot>
 
-      //React.createElement('div',null,React.createElement('h1',{className:'App'},'anil'))
-      // <div className="App">
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <h1 className="App-title">Welcome to React</h1>
-      //   </header>
-      //   <p className="App-intro">
-      //     To get started, edit <code>src/App.js</code> and save to reload.
-      //   </p>
-      // </div>
+
+
     );
   }
 }
 
-export default Radium(App);
+export default App;
