@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import  myClasses from './App.css';
 import Yog from './Yog/yog';
 
 class App extends Component {
@@ -92,7 +92,7 @@ class App extends Component {
     return (
 
       <div>
-          <p className={classes}> This is working Example</p>
+          <p className={myClasses.red}> This is working Example</p>
         <button style={style} onClick={this.toggleYog} >Switch Yog</button>
        
        
