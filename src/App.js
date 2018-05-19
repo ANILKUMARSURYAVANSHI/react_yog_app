@@ -64,6 +64,9 @@ class App extends Component {
         color:'white'
     }
 
+    let btnClasses = '';
+
+
     //Adding dynamic classes
       const classes = [];
 
@@ -87,13 +90,14 @@ class App extends Component {
          
         </div> 
       )
+        btnClasses = myClasses.Red
     }
 
     return (
 
-      <div>
+      <div className={myClasses.App}>
           <p className={myClasses.red}> This is working Example</p>
-        <button style={style} onClick={this.toggleYog} >Switch Yog</button>
+        <button className={btnClasses} onClick={this.toggleYog} >Switch Yog</button>
        
        
         {yogs}
