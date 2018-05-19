@@ -1,5 +1,5 @@
 import React from 'react';
-import './Yog.css';
+import  classes from  './Yog.css';
 
 
 
@@ -10,7 +10,7 @@ const yog = (props) => {
         }
     }
     return (
-        <div className="Yog" style={style}>
+        <div className={classes.Yog} style={style}>
             <p onClick={props.click} >Daily do yoga {props.name} </p>
             <p>{props.children}</p>
             <input type="text" onChange={props.changed} />
