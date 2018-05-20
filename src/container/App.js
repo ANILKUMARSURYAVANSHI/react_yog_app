@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  myClasses from './App.css';
 import Yogs from '../components/yogs/yogs';
+import Cockpit from "../components/Cockpit/Cockpit";
 
 class App extends Component {
   state = {
@@ -64,7 +65,7 @@ class App extends Component {
         color:'white'
     }
 
-    let btnClasses = '';
+
 
 
     //Adding dynamic classes
@@ -88,22 +89,20 @@ class App extends Component {
               yogs={this.state.yogs}
               clicked={this.deleteYog}
               changed={this.someNameHandler}
-
           />
-
          
         </div> 
       )
-        btnClasses = myClasses.Red
+
     }
 
     return (
 
       <div className={myClasses.App}>
-          <p className={myClasses.red}> This is working Example</p>
-        <button className={btnClasses} onClick={this.toggleYog} >Switch Yog</button>
-       
-       
+        <Cockpit
+            showYogs={this.state.showYog}
+            clicked={this.toggleYog}/>
+
         {yogs}
       </div>
 
