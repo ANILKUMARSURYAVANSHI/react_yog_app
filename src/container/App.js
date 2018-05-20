@@ -4,7 +4,7 @@ import Yogs from '../components/yogs/yogs';
 import Cockpit from "../components/Cockpit/Cockpit";
 
 class App extends Component {
-  
+
     constructor(props) {
 
         super(props)

@@ -5,7 +5,24 @@ import  classes from './Yog.css';
 
 class Yog extends Component {
 
+    constructor(props) {
+
+        super(props)
+        console.log('[Yog.js] Inside Constructor ', props);
+    }
+
+    componentWillMount() {
+        console.log('[Yog.js] Inside the ComponentWillMount()')
+    }
+
+    componentDidMount() {
+        console.log('[Yog.js] Inside the ComponentDidMount')
+    }
+
+
     render(){
+
+        console.log('[yog.js] inside the render()')
         const style = {
             '@media(min-width: 500px)':{
                 width:'450px'
