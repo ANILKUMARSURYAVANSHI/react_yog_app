@@ -4,15 +4,32 @@ import Yogs from '../components/yogs/yogs';
 import Cockpit from "../components/Cockpit/Cockpit";
 
 class App extends Component {
-  state = {
-    yogs: [{
-      name: 'Asan', id: 'tt' 
-    },
-    {
-      name: 'Pranayam', id: 'jy'
-    }],
-    showYog:false
-  }
+  
+    constructor(props) {
+
+        super(props)
+        console.log('[App.js] Inside Constructor ', props);
+
+        this.state = {
+            yogs: [{
+                name: 'Asan', id: 'tt'
+            },
+                {
+                    name: 'Pranayam', id: 'jy'
+                }],
+            showYog: false
+        }
+
+    }
+
+    componentWillMount() {
+        console.log('[App.js] Inside the ComponentWillMount()')
+    }
+
+    componentDidMount() {
+        console.log('[App.js] Inside the ComponentDidMount')
+    }
+
 
   someHandler = (newval) => {
 
@@ -59,6 +76,7 @@ class App extends Component {
 
 
   render() {
+      console.log('[App.js] Inside the render()')
     const style = {
       backgroundColor: 'green',
       border: '1px solid blue',
