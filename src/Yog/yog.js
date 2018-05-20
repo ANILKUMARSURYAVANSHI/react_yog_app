@@ -1,5 +1,6 @@
 import React from 'react';
 import  classes from  './Yog.css';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 
 
 
@@ -9,12 +10,18 @@ const yog = (props) => {
                 width:'450px'
         }
     }
+    const rnd = Math.random();
+    if(rnd>0.7){
+        throw new Error('Some went Wrong')
+    }
     return (
+        <ErrorBoundary key={props.id} >
         <div className={classes.Yog} style={style}>
             <p onClick={props.click} >Daily do yoga {props.name} </p>
             <p>{props.children}</p>
             <input type="text" onChange={props.changed} />
-        </div>);
+        </div>
+        </ErrorBoundary>);
 }
 
 export default yog;
