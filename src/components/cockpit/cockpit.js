@@ -12,6 +12,7 @@ const Cockpit = (props)=>{
 
     return (
         <div className={myClasses.Cockpit}>
+            <h1>{props.appTitle}</h1>
             <p className={myClasses.red}> This is working Example</p>
             <button className={btnClasses} onClick={props.clicked} >Switch Yog</button>
         </div>

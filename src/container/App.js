@@ -99,7 +99,7 @@ class App extends Component {
     return (
 
       <div className={myClasses.App}>
-        <Cockpit
+        <Cockpit appTitle={this.props.appTitle}
             showYogs={this.state.showYog}
             clicked={this.toggleYog}/>
 
