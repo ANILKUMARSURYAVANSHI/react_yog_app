@@ -1,10 +1,21 @@
-import React from 'react';
+import React , { Component } from 'react';
 import Yog from './Yog/yog';
 
 
-const Yogs = (props)=> props.yogs.map((yog,index)=>{
-    return <Yog  click={() => props.clicked(index)} name={yog.name} key={yog.id} changed={(event)=>props.changed(event,yog.id)} />
-})
+class Yogs extends Component {
+
+    render(){
+        return (
+            this.props.yogs.map((yog,index)=> {
+                return <Yog click={() => this.props.clicked(index)} name={yog.name} key={yog.id}
+                            changed={(event) => this.props.changed(event, yog.id)}/>
+            }))
+    }
+
+}
+
+
+
 
 
 export default  Yogs;
