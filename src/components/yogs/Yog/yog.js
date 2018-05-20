@@ -1,23 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
 import  classes from './Yog.css';
 
 
 
-const yog = (props) => {
-    const style = {
-        '@media(min-width: 500px)':{
+class Yog extends Component {
+
+    render(){
+        const style = {
+            '@media(min-width: 500px)':{
                 width:'450px'
+            }
         }
+        return (
+            <div className={classes.Yog} style={style}>
+                <p onClick={this.props.click} >Daily do yoga {this.props.name} </p>
+                <p>{this.props.children}</p>
+                <input type="text" onChange={this.props.changed} />
+            </div>
+        );
     }
-
-
-    return (
-
-        <div className={classes.Yog} style={style}>
-            <p onClick={props.click} >Daily do yoga {props.name} </p>
-            <p>{props.children}</p>
-            <input type="text" onChange={props.changed} />
-        </div>);
 }
 
-export default yog;
+
+
+export default Yog;
