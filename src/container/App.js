@@ -31,6 +31,28 @@ class App extends Component {
     }
 
 
+    componentWillReceiveProps(props){
+        console.log('[Update App.js] Inside the componentWillRevieveProps', props);
+
+    }
+
+    shouldComponentUpdate(nextProps, nextState){
+        console.log('[Update App.js] Inside the shouldComponentUpdate');
+       
+        return true;
+
+    }
+
+
+    componentWillUpdate(nextProps, nextState){
+        console.log('[Update App.js] Inside the componentWillUpdate');
+    }
+
+    componentDidUpdate(){
+        console.log('[Update App.js] Inside the componentDidUpdate');
+    }
+
+
   someHandler = (newval) => {
 
     console.log('11');

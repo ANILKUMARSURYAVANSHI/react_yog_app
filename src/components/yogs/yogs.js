@@ -19,6 +19,26 @@ class Yogs extends Component {
         console.log('[Yogs.js] Inside the ComponentDidMount')
     }
 
+    shouldComponentUpdate(nextProps, nextState){
+        console.log('[Update Yogs.js] Inside the shouldComponentUpdate');
+       // return    true;
+        return nextProps.yogs !== this.props.yogs;
+
+    }
+
+    componentWillReceiveProps(props){
+        console.log('[Update Yogs.js] Inside the componentWillRevieveProps');
+
+    }
+
+    componentWillUpdate(nextProps, nextState){
+        console.log('[Update Yogs.js] Inside the componentWillUpdate');
+    }
+
+    componentDidUpdate(){
+        console.log('[Update Yogs.js] Inside the componentDidUpdate');
+    }
+
     render(){
         console.log('[Yogs.js] Inside render()')
         return (
