@@ -38,8 +38,9 @@ class App extends Component {
 
     shouldComponentUpdate(nextProps, nextState){
         console.log('[Update App.js] Inside the shouldComponentUpdate');
-       
-        return true;
+
+        return nextState.yogs !== this.state.yogs ||
+            nextState.showYog !== this.state.showYog;
 
     }
 
