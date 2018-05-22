@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import  classes from './Yog.css';
+import PropTypes from 'prop-types';
 
 
 
@@ -36,6 +37,12 @@ class Yog extends Component {
             </div>
         );
     }
+}
+
+Yog.propTypes = {
+    click: PropTypes.func,
+    name: PropTypes.string,
+    changed:PropTypes.func
 }
 
 
