@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b968948-642d-48fe-933e-0e9451cd0866" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/container/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withNewClass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withNewClass.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,10 +16,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/container/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="1158">
               <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
@@ -53,16 +53,16 @@
         <entry file="file://$PROJECT_DIR$/src/hoc/WithClass.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="withNewClass.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="withNewClass.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hoc/withNewClass.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="75">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -126,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/hoc/aux.js" />
         <option value="$PROJECT_DIR$/src/components/Cockpit/Cockpit.js" />
         <option value="$PROJECT_DIR$/src/hoc/WithClass.js" />
-        <option value="$PROJECT_DIR$/src/hoc/withNewClass.js" />
         <option value="$PROJECT_DIR$/src/container/App.js" />
+        <option value="$PROJECT_DIR$/src/hoc/withNewClass.js" />
       </list>
     </option>
   </component>
@@ -202,6 +202,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -245,7 +246,7 @@
       <workItem from="1526829045734" duration="1484000" />
       <workItem from="1526913890610" duration="473000" />
       <workItem from="1526956572496" duration="1806000" />
-      <workItem from="1526997956987" duration="551000" />
+      <workItem from="1526997956987" duration="1109000" />
     </task>
     <task id="LOCAL-00001" summary="Remove Radium">
       <created>1526566961154</created>
@@ -258,7 +259,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34317000" />
+    <option name="totallyTimeSpent" value="34875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -653,27 +654,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1158">
+          <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/hoc/WithClass.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hoc/withNewClass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
         </state>
       </provider>
     </entry>
