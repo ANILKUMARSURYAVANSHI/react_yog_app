@@ -10,6 +10,7 @@ class Yog extends Component {
 
         super(props)
         console.log('[Yog.js] Inside Constructor ', props);
+        this.inputElement = React.createRef();
     }
 
     componentWillMount() {
@@ -19,7 +20,7 @@ class Yog extends Component {
     componentDidMount() {
         console.log('[Yog.js] Inside the ComponentDidMount');
         if(this.props.position === 0)
-        this.inputElement.focus();
+        this.inputElement.current.focus();
     }
 
 
@@ -35,7 +36,7 @@ class Yog extends Component {
             <div className={classes.Yog} style={style}>
                 <p onClick={this.props.click} >Daily do yoga {this.props.name} </p>
                 <p>{this.props.children}</p>
-                <input ref={(inp)=>{this.inputElement = inp}}
+                <input ref={this.inputElement}
                     type="text" onChange={this.props.changed} />
             </div>
         );
