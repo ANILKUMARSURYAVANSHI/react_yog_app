@@ -19,7 +19,8 @@ class App extends PureComponent{
                 {
                     name: 'Pranayam', id: 'jy'
                 }],
-            showYog: false
+            showYog: false,
+            toggleClicked:0
         }
 
     }
@@ -89,7 +90,7 @@ class App extends PureComponent{
 
   toggleYog =()=>{
     const showStatus = this.state.showYog;
-    this.setState({showYog: !showStatus})
+    this.setState({showYog: !showStatus, toggleClicked: this.state.toggleClicked +1})
   }
 
   deleteYog=(yogIndex)=>{
