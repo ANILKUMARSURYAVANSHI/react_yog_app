@@ -90,7 +90,12 @@ class App extends PureComponent{
 
   toggleYog =()=>{
     const showStatus = this.state.showYog;
-    this.setState({showYog: !showStatus, toggleClicked: this.state.toggleClicked +1})
+    this.setState((prevState, props) =>{
+         return  {showYog: !showStatus,
+                toggleClicked: prevState.toggleClicked +1}
+    }
+
+        )
   }
 
   deleteYog=(yogIndex)=>{
