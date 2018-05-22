@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react';
 import  myClasses from './App.css';
 import Yogs from '../components/yogs/yogs';
 import Cockpit from "../components/Cockpit/Cockpit";
-import WithClass from '../hoc/WithClass'
+import Aux from '../hoc/aux';
+import WithNewClass from '../hoc/withNewClass';
 
 class App extends PureComponent{
 
@@ -141,15 +142,16 @@ class App extends PureComponent{
     return (
 
 
-        <WithClass classes={myClasses.App}>
 
+        <Aux>
 
         <Cockpit appTitle={this.props.appTitle}
             showYogs={this.state.showYog}
             clicked={this.toggleYog}/>
 
         {yogs}
-        </WithClass>
+        </Aux>
+
 
 
 
@@ -158,4 +160,4 @@ class App extends PureComponent{
   }
 }
 
-export default App;
+export default WithNewClass(App,myClasses.App);
