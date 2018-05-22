@@ -14,11 +14,11 @@ class App extends PureComponent{
 
         this.state = {
             yogs: [{
-                name: 'Asan', id: 'tt'
-            },
-                {
-                    name: 'Pranayam', id: 'jy'
-                }],
+                    name: 'Asan', id: 'tt'
+                    },
+                    {
+                        name: 'Pranayam', id: 'jy'
+                    }],
             showYog: false,
             toggleClicked:0
         }
