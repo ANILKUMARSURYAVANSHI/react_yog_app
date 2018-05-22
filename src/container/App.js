@@ -141,14 +141,10 @@ class App extends PureComponent{
 
     return (
 
-
-
         <Aux>
-
         <Cockpit appTitle={this.props.appTitle}
             showYogs={this.state.showYog}
             clicked={this.toggleYog}/>
-
         {yogs}
         </Aux>
 
