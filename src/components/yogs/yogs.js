@@ -43,8 +43,12 @@ class Yogs extends Component {
         console.log('[Yogs.js] Inside render()')
         return (
             this.props.yogs.map((yog,index)=> {
-                return <Yog click={() => this.props.clicked(index)} name={yog.name} key={yog.id}
-                            changed={(event) => this.props.changed(event, yog.id)}/>
+                return <Yog click={() => this.props.clicked(index)}
+                            name={yog.name}
+                            key={yog.id}
+                            changed={(event) => this.props.changed(event, yog.id)}
+                            position={index}
+                        />
             }))
     }
 

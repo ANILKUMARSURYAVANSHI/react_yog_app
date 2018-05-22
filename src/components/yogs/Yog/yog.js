@@ -17,7 +17,9 @@ class Yog extends Component {
     }
 
     componentDidMount() {
-        console.log('[Yog.js] Inside the ComponentDidMount')
+        console.log('[Yog.js] Inside the ComponentDidMount');
+        if(this.props.position === 0)
+        this.inputElement.focus();
     }
 
 
@@ -33,7 +35,8 @@ class Yog extends Component {
             <div className={classes.Yog} style={style}>
                 <p onClick={this.props.click} >Daily do yoga {this.props.name} </p>
                 <p>{this.props.children}</p>
-                <input type="text" onChange={this.props.changed} />
+                <input ref={(inp)=>{this.inputElement = inp}}
+                    type="text" onChange={this.props.changed} />
             </div>
         );
     }
