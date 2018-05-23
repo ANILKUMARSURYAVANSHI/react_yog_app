@@ -39,6 +39,7 @@ class Yog extends Component {
         }
         return (
             <div className={classes.Yog} style={style}>
+                <p>{this.props.authenticate ? <span>I am Authenticated</span>:null} </p>
                 <p onClick={this.props.click} >Daily do yoga {this.props.name} </p>
                 <p>{this.props.children}</p>
                 <input ref={this.inputElement}
@@ -51,7 +52,9 @@ class Yog extends Component {
 Yog.propTypes = {
     click: PropTypes.func,
     name: PropTypes.string,
-    changed:PropTypes.func
+    changed:PropTypes.func,
+    authenticate: PropTypes.bool
+
 }
 
 

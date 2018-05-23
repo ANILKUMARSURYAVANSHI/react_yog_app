@@ -53,6 +53,7 @@ class Yogs extends Component {
                             changed={(event) => this.props.changed(event, yog.id)}
                             position={index}
                             ref={this.lastYogRef}
+                            authenticate={this.props.isAuthenticated}
                         />
             }))
     }

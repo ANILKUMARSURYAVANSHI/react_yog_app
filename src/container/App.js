@@ -20,7 +20,8 @@ class App extends PureComponent{
                         name: 'Pranayam', id: 'jy'
                     }],
             showYog: false,
-            toggleClicked:0
+            toggleClicked:0,
+            authenticated:false
         }
 
     }
@@ -88,6 +89,12 @@ class App extends PureComponent{
  
   }
 
+    loginHandler = ()=>{
+
+        this.setState({authenticated:true});
+
+    }
+
   toggleYog =()=>{
     const showStatus = this.state.showYog;
     this.setState((prevState, props) =>{
@@ -138,6 +145,7 @@ class App extends PureComponent{
               yogs={this.state.yogs}
               clicked={this.deleteYog}
               changed={this.someNameHandler}
+              isAuthenticated={this.state.authenticated}
           />
          
         </div> 
@@ -150,8 +158,9 @@ class App extends PureComponent{
         <Aux>
         <Cockpit appTitle={this.props.appTitle}
             showYogs={this.state.showYog}
-            clicked={this.toggleYog}/>
-        {yogs}
+            clicked={this.toggleYog}
+            login={this.loginHandler}/>
+            {yogs}
         </Aux>
 
 
