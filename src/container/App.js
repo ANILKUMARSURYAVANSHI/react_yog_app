@@ -59,6 +59,16 @@ class App extends PureComponent{
         console.log('[Update App.js] Inside the componentDidUpdate');
     }
 
+    static  getDerivedStateFromProps(nextProps,PreState){  //Method not connect to single thing so use static
+        console.log('[Update App.js] Inside the getDrivedStateFromProps');
+
+        return PreState;
+    }
+
+    getSnapshotBeforeUpdate(){
+        console.log('[Update App.js] Inside the getSnapshotBeforeUpdate');
+    }
+
 
   someHandler = (newval) => {
 
