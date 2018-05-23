@@ -5,6 +5,8 @@ import Cockpit from "../components/Cockpit/Cockpit";
 import Aux from '../hoc/aux';
 import WithNewClass from '../hoc/withNewClass';
 
+export const AuthContext = React.createContext(false);
+
 class App extends PureComponent{
 
     constructor(props) {
@@ -160,7 +162,9 @@ class App extends PureComponent{
             showYogs={this.state.showYog}
             clicked={this.toggleYog}
             login={this.loginHandler}/>
+            <AuthContext.Provider  value={this.state.authenticated } >
             {yogs}
+            </AuthContext.Provider>
         </Aux>
 
 

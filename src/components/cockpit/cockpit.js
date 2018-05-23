@@ -16,6 +16,7 @@ const Cockpit = (props)=>{
             <h1>{props.appTitle}</h1>
             <p className={myClasses.red}> This is working Example</p>
             <button className={btnClasses} onClick={props.clicked} >Switch Yog</button>
+            <button onClick={props.login} >Log In</button>
         </Aux>
 
     );

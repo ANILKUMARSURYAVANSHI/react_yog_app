@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import  classes from './Yog.css';
 import PropTypes from 'prop-types';
+import AuthContext from '../../../container/App';
 
 
 
@@ -39,7 +40,9 @@ class Yog extends Component {
         }
         return (
             <div className={classes.Yog} style={style}>
-                <p>{this.props.authenticate ? <span>I am Authenticated</span>:null} </p>
+
+                <AuthContext.Consumer> {auth=>auth ? <p>I am logged</p>:null} </AuthContext.Consumer>
+
                 <p onClick={this.props.click} >Daily do yoga {this.props.name} </p>
                 <p>{this.props.children}</p>
                 <input ref={this.inputElement}
