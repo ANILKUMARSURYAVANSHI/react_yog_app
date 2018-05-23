@@ -9,6 +9,8 @@ class Yogs extends Component {
 
         super(props)
         console.log('[Yogs.js] Inside Constructor ', props);
+
+        this.lastYogRef = React.createRef();
     }
 
     componentWillMount() {
@@ -17,6 +19,7 @@ class Yogs extends Component {
 
     componentDidMount() {
         console.log('[Yogs.js] Inside the ComponentDidMount')
+        this.lastYogRef.current.focus();
     }
 
     shouldComponentUpdate(nextProps, nextState){
@@ -39,6 +42,7 @@ class Yogs extends Component {
         console.log('[Update Yogs.js] Inside the componentDidUpdate');
     }
 
+
     render(){
         console.log('[Yogs.js] Inside render()')
         return (
@@ -48,6 +52,7 @@ class Yogs extends Component {
                             key={yog.id}
                             changed={(event) => this.props.changed(event, yog.id)}
                             position={index}
+                            ref={this.lastYogRef}
                         />
             }))
     }

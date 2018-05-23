@@ -8,16 +8,22 @@ const withNewClass = (WrappedComponent, className)=>{
     //     </div>
     // )
 
-    return class extends Component {
+    const WithNewClass =  class extends Component {
         render(){
             return (
                 <div className={className}>
-                           <WrappedComponent  {...this.props} />
+                           <WrappedComponent ref={this.props.forwardedRef}  {...this.props} />
 
                        </div>
             )
         }
     }
+
+    return React.forwardRef((props, ref)=>{
+            return  <WithNewClass {...props} forwarded={ref}  />
+    })
+
+
 }
 
 export default  withNewClass;

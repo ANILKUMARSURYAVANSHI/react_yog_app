@@ -24,6 +24,11 @@ class Yog extends Component {
     }
 
 
+    focus(){
+            this.inputElement.current.focus();
+    }
+
+
     render(){
 
         console.log('[yog.js] inside the render()')
